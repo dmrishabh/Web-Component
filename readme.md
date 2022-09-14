@@ -19,6 +19,14 @@ element.attachShadow({mode:open})
 // Create a shadowRoot that we can reference and interact with 
 ```
 - HTML Template
+```js
+
+// define encapsulated markup of our web component
+// template tag stores markup on page
+// include both html and css in templates
+// use slot to add custom text
+
+```
 ---
 #### Some benefits
 
@@ -26,7 +34,7 @@ element.attachShadow({mode:open})
 * Create custom html tags
 * Create custom class
 * lifecycle methods available
-
+---
 ## Custom Elements lifecycle method 
 
 ```javascript
@@ -45,13 +53,22 @@ attributeChangedCallback( attributeName , oldValue, newValue ){
 
 ```
 
-## HTML Templates
+---
 
-* define encapsulated markup of our web component
-* template tag stores markup on page
-* include both html and css in templates 
-* use slot to add custom text
-
-
-
+## Getting Started
+---
+```js
+// Syntax 
+class userCard extends HTMLElement {
+    constructor() {
+      // Always call super first in constructor
+      super();
+  
+      // Element functionality written in here
+    }
+  }
+  customElements.define('user-card', WordCount);
+  
+```
+---
 
