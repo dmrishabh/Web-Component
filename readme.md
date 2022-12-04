@@ -72,3 +72,9 @@ class userCard extends HTMLElement {
 ```
 ---
 
+## Note 
+* name of web custom ele can not be single
+ ```js
+  myelement // incorrect
+  my-element // correct
+ ```

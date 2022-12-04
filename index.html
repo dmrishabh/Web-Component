@@ -4,20 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClassBase Html</title>
+    <title>Web Components</title>
     <style>
-        h3{
-            color: red;
+        body{
+            background-color: #252525;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .button{
+            margin: 20px auto;
+            background-color: #252525;
+            color: white;
+            border-radius: 20px;
+            padding: 1rem 3rem;
+            border: none;
+            cursor: pointer;
+            text-transform: capitalize;
+            box-shadow: 1px 1px 1px .5px #353535;
+        }
+        .button:hover{
+            background-color: #353535;
+            color: #d5d5d5;
+        }
+        .button:disabled{
+            background-color: #353535;
+        }
+        .fading{
+            animation: fading 0.5s infinite;
+        }
+        @keyframes fading {
+            0%{
+                color: #353535; 
+
+            }
+            50%{
+               color: white; 
+            }
+            100%{
+                color: #353535; 
+
+            }
         }
     </style>
 </head>
 <body>
-    <h3>WEB COMPONENT</h3>
-    <user-card data-name="rishabh mishra data">
-        
-    </user-card>
-    
-    
-    <script src="./userCard.js"></script>
+   
+<app-button id="button-login" onclick="login();" class="" text="Login" text-loading="Logging in">
+   
+</app-button>
+<br>
+<app-button id="button-register" onclick="register();" class="" text="Register" text-loading="Registering">
+  
+</app-button>
+<br>
+
+<script src="./index.js"></script>
 </body>
 </html>
